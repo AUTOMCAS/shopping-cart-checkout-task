@@ -11,7 +11,7 @@ class ShoppingCartCheckout {
     this.shoppingCart.push(product);
   }
 
-  totalPrice() {
+  getTotalPrice() {
     let total = 0;
 
     this.shoppingCart.forEach((product) => {

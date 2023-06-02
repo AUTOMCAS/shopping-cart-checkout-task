@@ -27,7 +27,7 @@ describe('ShoppingCartCheckout', () => {
 
     shoppingCartCheckout.addProduct(fruitTea);
 
-    expect(shoppingCartCheckout.totalPrice()).toEqual('£3.11');
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£3.11');
   });
 
   test('should total price of cart with Strawberries', () => {
@@ -35,7 +35,7 @@ describe('ShoppingCartCheckout', () => {
 
     shoppingCartCheckout.addProduct(strawberries);
 
-    expect(shoppingCartCheckout.totalPrice()).toEqual('£5.00');
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£5.00');
   });
 
   test('should total price of cart with Coffee', () => {
@@ -43,7 +43,7 @@ describe('ShoppingCartCheckout', () => {
 
     shoppingCartCheckout.addProduct(coffee);
 
-    expect(shoppingCartCheckout.totalPrice()).toEqual('£11.23');
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£11.23');
   });
 
   test('should total price of cart with more than one item', () => {
@@ -53,6 +53,6 @@ describe('ShoppingCartCheckout', () => {
     shoppingCartCheckout.addProduct(strawberries);
     shoppingCartCheckout.addProduct(coffee);
 
-    expect(shoppingCartCheckout.totalPrice()).toEqual('£19.34');
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£19.34');
   });
 });
