@@ -37,4 +37,13 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.totalPrice()).toEqual('£5.00')
   });
 
+    test('should total price of cart with Coffee', () => {
+    const shoppingCartCheckout = new ShoppingCartCheckout()
+    const coffee = new Product('CF1', 'Coffee', 11.23)
+
+    shoppingCartCheckout.addProduct(coffee)
+
+    expect(shoppingCartCheckout.totalPrice()).toEqual('£11.23')
+  });
+
 });
