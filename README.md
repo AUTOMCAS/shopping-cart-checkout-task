@@ -22,6 +22,7 @@ CF1             Coffee          £11.23
 ## Solution
 
 <!-- commits were only made on successful test pass -->
+<!-- checkboxes of completion -->
 
 ### Planning
 
