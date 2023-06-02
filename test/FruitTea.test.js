@@ -1,4 +1,4 @@
-const FruitTea = require('../src/FruitTea')
+const FruitTea = require('../src/products/FruitTea')
 
 describe('FruitTea', () => {
   test('should have instance variables', () => {

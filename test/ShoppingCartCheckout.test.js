@@ -1,5 +1,5 @@
 const ShoppingCartCheckout = require('../src/ShoppingCartCheckout');
-const Product = require('../src/Product');
+const Product = require('../src/products/Product');
 
 describe('ShoppingCartCheckout', () => {
   const fruitTea = new Product('FR1', 'Fruit Tea', 3.11);

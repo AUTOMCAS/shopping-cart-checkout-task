@@ -1,4 +1,4 @@
-const Product = require('../src/Product')
+const Product = require('../src//products/Product')
 
 describe('Product', () => {
   test('should have "code" instance variable', () => {
