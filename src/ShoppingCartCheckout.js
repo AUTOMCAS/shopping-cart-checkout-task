@@ -23,9 +23,9 @@ class ShoppingCartCheckout {
     }
   }
 
-  getTotalPrice() {
+  calculateTotalPrice() {
     let total = 0;
-
+    
     this.shoppingCart.forEach((item) => {
       if (item.product.code === 'FR1') {
         const buyOneGetOneFreePrice =
@@ -37,7 +37,13 @@ class ShoppingCartCheckout {
       }
     });
 
-    return `£${total.toFixed(2)}`;
+    return total;
+  }
+
+  getTotalPrice() {
+    const totalPrice = this.calculateTotalPrice();
+
+    return `£${totalPrice.toFixed(2)}`;
   }
 }
 

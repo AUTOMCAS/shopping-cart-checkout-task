@@ -87,4 +87,6 @@ describe('ShoppingCartCheckout', () => {
 
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£12.44');
   });
+
+
 });
