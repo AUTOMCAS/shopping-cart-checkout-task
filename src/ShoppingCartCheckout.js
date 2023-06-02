@@ -16,7 +16,7 @@ class ShoppingCartCheckout {
 
     total =+ this.shoppingCart[0].price;
 
-    return `£${total}`;
+    return `£${total.toFixed(2)}`;
   }
 }
 
