@@ -98,4 +98,19 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£13.50');
   });
 
+
+  test('should calculate total price of cart with multiple items and discounts', () => {
+    const shoppingCartCheckout = new ShoppingCartCheckout();
+
+    shoppingCartCheckout.addProduct(strawberries);
+    shoppingCartCheckout.addProduct(strawberries);
+    shoppingCartCheckout.addProduct(strawberries);
+
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+
+    shoppingCartCheckout.addProduct(coffee);
+
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£27.84');
+  });
 });
