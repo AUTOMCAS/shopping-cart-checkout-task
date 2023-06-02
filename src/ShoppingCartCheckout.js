@@ -1,15 +1,23 @@
-class ShoppingCartCheckout{
+class ShoppingCartCheckout {
   constructor() {
-    this.shoppingCart = []
+    this.shoppingCart = [];
   }
 
   getShoppingCart() {
-    return this.shoppingCart
+    return this.shoppingCart;
   }
 
   addProduct(product) {
-    this.shoppingCart.push(product)
+    this.shoppingCart.push(product);
+  }
+
+  totalPrice() {
+    let total = 0;
+
+    total =+ this.shoppingCart[0].price;
+
+    return `£${total}`;
   }
 }
 
-module.exports = ShoppingCartCheckout
+module.exports = ShoppingCartCheckout;
