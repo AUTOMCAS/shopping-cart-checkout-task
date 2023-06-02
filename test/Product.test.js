@@ -13,4 +13,10 @@ describe('Product', () => {
     expect(product.name).toEqual('Product Name')
   });
 
+  test('should have "price" instance variable', () => {
+    const product = new Product('codeExample', 'Product Name', 3.11)
+
+    expect(product.price).toEqual(3.11)
+  });
+
 });
