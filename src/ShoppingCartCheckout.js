@@ -14,7 +14,9 @@ class ShoppingCartCheckout {
   totalPrice() {
     let total = 0;
 
-    total =+ this.shoppingCart[0].price;
+    this.shoppingCart.forEach((product) => {
+      total += product.price;
+    });
 
     return `£${total.toFixed(2)}`;
   }
