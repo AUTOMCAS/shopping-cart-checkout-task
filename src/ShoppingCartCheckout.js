@@ -28,11 +28,10 @@ class ShoppingCartCheckout {
 
     this.shoppingCart.forEach((item) => {
       if (item.product.code === 'FR1') {
-        let discountedPrice = 0;
+        const buyOneGetOneFreePrice =
+          Math.ceil(item.quantity / 2) * item.product.price;
 
-        discountedPrice = Math.ceil(item.quantity / 2) * item.product.price;
-
-        total += discountedPrice;
+        total += buyOneGetOneFreePrice;
       } else {
         total += item.product.price * item.quantity;
       }
