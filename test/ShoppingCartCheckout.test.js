@@ -22,7 +22,7 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCart[0]).toEqual(fruitTea);
   });
 
-  test('should total price of cart with Fruit tea', () => {
+  test('should calculate total price of cart with Fruit tea', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
     shoppingCartCheckout.addProduct(fruitTea);
@@ -30,7 +30,7 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£3.11');
   });
 
-  test('should total price of cart with Strawberries', () => {
+  test('should calculate total price of cart with Strawberries', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
     shoppingCartCheckout.addProduct(strawberries);
@@ -38,7 +38,7 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£5.00');
   });
 
-  test('should total price of cart with Coffee', () => {
+  test('should calculate total price of cart with Coffee', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
     shoppingCartCheckout.addProduct(coffee);
@@ -46,7 +46,7 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£11.23');
   });
 
-  test('should total price of cart with more than one item', () => {
+  test('should calculate total price of cart with more than one item', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
     shoppingCartCheckout.addProduct(fruitTea);
@@ -55,4 +55,14 @@ describe('ShoppingCartCheckout', () => {
 
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£19.34');
   });
+
+  test('should calculate total price of cart with more than one of same item', () => {
+    const shoppingCartCheckout = new ShoppingCartCheckout();
+
+    shoppingCartCheckout.addProduct(coffee);
+    shoppingCartCheckout.addProduct(coffee);
+
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£22.46');
+  });
+
 });

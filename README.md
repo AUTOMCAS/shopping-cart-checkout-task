@@ -21,6 +21,8 @@ CF1             Coffee          £11.23
 
 ## Solution
 
+<!-- commits were only made on successful test pass -->
+
 ### Planning
 
 <!-- Excalidraw link -->
