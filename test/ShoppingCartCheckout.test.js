@@ -1,10 +1,14 @@
 const ShoppingCartCheckout = require('../src/ShoppingCartCheckout');
-const Product = require('../src/products/Product');
+
+const FruitTea = require('../src/products/FruitTea');
+const Strawberries = require('../src/products/Strawberries');
+const Coffee = require('../src/products/Coffee');
+
 
 describe('ShoppingCartCheckout', () => {
-  const fruitTea = new Product('FR1', 'Fruit Tea', 3.11);
-  const strawberries = new Product('SR1', 'Strawberries', 5.0);
-  const coffee = new Product('CF1', 'Coffee', 11.23);
+  const fruitTea = new FruitTea();
+  const strawberries = new Strawberries();
+  const coffee = new Coffee();
 
   test('should return shopping cart', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
