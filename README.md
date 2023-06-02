@@ -40,7 +40,7 @@ Further improvements:
 
 ## Planning
 
-<!-- Excalidraw link -->
+![alt text](https://github.com/AUTOMCAS/shopping-cart-checkout-task/blob/main/misc/planning-diagram.png?raw=true)
 
 ## Setup
 
@@ -62,7 +62,7 @@ Run tests with coverage
 npm run coverage
 ```
 
-<!-- Tests link -->
+![alt text](https://github.com/AUTOMCAS/shopping-cart-checkout-task/blob/main/misc/test-coverage.png?raw=true)
 
 ## Running the solution
 
