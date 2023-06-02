@@ -19,7 +19,7 @@ describe('ShoppingCartCheckout', () => {
 
     const shoppingCart = shoppingCartCheckout.getShoppingCart();
 
-    expect(shoppingCart[0]).toEqual(fruitTea);
+    expect(shoppingCart[0].product).toEqual(fruitTea);
   });
 
   test('should calculate total price of cart with Fruit tea', () => {
@@ -63,6 +63,15 @@ describe('ShoppingCartCheckout', () => {
     shoppingCartCheckout.addProduct(coffee);
 
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£22.46');
+  });
+
+  test('should calculate total price of cart with 2x Fruit Tea and buy-one-get-one-free discount', () => {
+    const shoppingCartCheckout = new ShoppingCartCheckout();
+
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£3.11');
   });
 
 });
