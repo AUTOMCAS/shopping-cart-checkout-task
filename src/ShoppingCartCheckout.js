@@ -6,6 +6,10 @@ class ShoppingCartCheckout{
   getShoppingCart() {
     return this.shoppingCart
   }
+
+  addProduct(product) {
+    this.shoppingCart.push(product)
+  }
 }
 
 module.exports = ShoppingCartCheckout
