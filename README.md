@@ -38,11 +38,11 @@ Further improvements:
 - Extraction of discounts to allow better extension without modification.
 
 
-### Planning
+## Planning
 
 <!-- Excalidraw link -->
 
-### Setup
+## Setup
 
 Install dependencies from within the project directory:
 
@@ -50,7 +50,7 @@ Install dependencies from within the project directory:
 npm install
 ```
 
-### Tests
+## Tests
 
 Run tests
 ```bash
@@ -64,7 +64,7 @@ npm run coverage
 
 <!-- Tests link -->
 
-### Running the solution
+## Running the solution
 
 From the main directory start node REPL:
 ```bash
