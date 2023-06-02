@@ -74,4 +74,17 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£3.11');
   });
 
+  test('should calculate total price of cart with 7x Fruit Tea and buy-one-get-one-free discount', () => {
+    const shoppingCartCheckout = new ShoppingCartCheckout();
+
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+    shoppingCartCheckout.addProduct(fruitTea);
+
+    expect(shoppingCartCheckout.getTotalPrice()).toEqual('£12.44');
+  });
 });
