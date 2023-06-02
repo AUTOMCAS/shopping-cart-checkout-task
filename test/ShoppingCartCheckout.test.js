@@ -2,6 +2,10 @@ const ShoppingCartCheckout = require('../src/ShoppingCartCheckout');
 const Product = require('../src/Product');
 
 describe('ShoppingCartCheckout', () => {
+  const fruitTea = new Product('FR1', 'Fruit Tea', 3.11);
+  const strawberries = new Product('SR1', 'Strawberries', 5.0);
+  const coffee = new Product('CF1', 'Coffee', 11.23);
+
   test('should return shopping cart', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
@@ -10,18 +14,16 @@ describe('ShoppingCartCheckout', () => {
 
   test('should add product to shopping cart', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
-    const product = new Product('FR1', 'Fruit Tea', 3.11);
 
-    shoppingCartCheckout.addProduct(product);
+    shoppingCartCheckout.addProduct(fruitTea);
 
     const shoppingCart = shoppingCartCheckout.getShoppingCart();
 
-    expect(shoppingCart[0]).toEqual(product);
+    expect(shoppingCart[0]).toEqual(fruitTea);
   });
 
   test('should total price of cart with Fruit tea', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
-    const fruitTea = new Product('FR1', 'Fruit Tea', 3.11);
 
     shoppingCartCheckout.addProduct(fruitTea);
 
@@ -30,7 +32,6 @@ describe('ShoppingCartCheckout', () => {
 
   test('should total price of cart with Strawberries', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
-    const strawberries = new Product('SR1', 'Strawberries', 5.0);
 
     shoppingCartCheckout.addProduct(strawberries);
 
@@ -39,7 +40,6 @@ describe('ShoppingCartCheckout', () => {
 
   test('should total price of cart with Coffee', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
-    const coffee = new Product('CF1', 'Coffee', 11.23);
 
     shoppingCartCheckout.addProduct(coffee);
 
@@ -48,10 +48,6 @@ describe('ShoppingCartCheckout', () => {
 
   test('should total price of cart with more than one item', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
-
-    const fruitTea = new Product('FR1', 'Fruit Tea', 3.11);
-    const strawberries = new Product('SR1', 'Strawberries', 5.0);
-    const coffee = new Product('CF1', 'Coffee', 11.23);
 
     shoppingCartCheckout.addProduct(fruitTea);
     shoppingCartCheckout.addProduct(strawberries);
