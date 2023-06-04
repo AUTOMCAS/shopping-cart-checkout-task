@@ -92,7 +92,7 @@ describe('ShoppingCartCheckout', () => {
     expect(shoppingCartCheckout.getTotalPrice()).toEqual('£12.44');
   });
 
-  test('should calculate total price of cart with 3x Strawberries discounted t £4.50 each', () => {
+  test('should calculate total price of cart with 3x Strawberries discounted at £4.50 each', () => {
     const shoppingCartCheckout = new ShoppingCartCheckout();
 
     shoppingCartCheckout.addProduct(strawberries);
